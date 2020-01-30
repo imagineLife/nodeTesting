@@ -9,7 +9,7 @@ _app = {};
 // Holder of all tests
 _app.tests = {};
 
-// Dependencies
+// Dependencies (tests-to-run)
 _app.tests.unit = require('./unit');
 
 // Count all the tests
