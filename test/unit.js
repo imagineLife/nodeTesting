@@ -24,7 +24,18 @@ unit['multiplyBy3 should return 12 with 4 input'] = function(done){
   done();
 };
 
+unit['passNumAndCB should return cb'] = function(done){
+  var val = tests.multiplyBy3(4);
+  assert.equal(val, 12);
+  done();
+};
 
+unit['passNumAndCB should return error object with string param'] = function(done){
+  var val = tests.multiplyBy3('string');
+  assert.equal(typeof val, 'object');
+  assert.equal(val.Error, 'invalid param type');
+  done();
+};
 
 
 // Export the tests to the runner
